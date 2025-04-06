@@ -100,7 +100,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, setIsSidebarOpen }) =>
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       )}>
         <div className="flex h-16 items-center border-b border-sidebar-border px-6">
-          <h2 className="text-xl font-bold">EchoFlow</h2>
+          <h2 className="text-xl font-bold">Sazzad</h2>
         </div>
         
         <ScrollArea className="flex-1 py-4">
@@ -135,7 +135,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isSidebarOpen, setIsSidebarOpen }) =>
         
         <div className="border-t border-sidebar-border p-4">
           <div className="text-xs text-sidebar-foreground/70">
-            <p>EchoFlow Inventory</p>
+            <p>Sazzad Inventory</p>
             <p>© 2025 All rights reserved</p>
           </div>
         </div>

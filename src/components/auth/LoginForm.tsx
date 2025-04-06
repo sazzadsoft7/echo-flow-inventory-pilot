@@ -32,7 +32,7 @@ const LoginForm: React.FC = () => {
     <div className="flex min-h-screen items-center justify-center bg-muted/30 px-4">
       <Card className="w-full max-w-md shadow-lg">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-bold">EchoFlow Inventory</CardTitle>
+          <CardTitle className="text-2xl font-bold">Sazzad Inventory</CardTitle>
           <CardDescription>
             Enter your credentials to access your account
           </CardDescription>

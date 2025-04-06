@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({ setIsSidebarOpen }) => {
           <Menu className="h-5 w-5" />
           <span className="sr-only">Toggle Menu</span>
         </Button>
-        <h1 className="text-xl font-bold">EchoFlow Inventory</h1>
+        <h1 className="text-xl font-bold">Sazzad Inventory</h1>
       </div>
       
       <div className="flex items-center gap-2">
