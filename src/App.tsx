@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { AuthProvider, useAuth } from "./context/AuthContext";
 import { ThemeProvider } from "./components/ThemeProvider";
 
@@ -25,13 +25,15 @@ const queryClient = new QueryClient();
 // Protected route wrapper
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { isAuthenticated, isLoading } = useAuth();
+  const location = useLocation();
   
   if (isLoading) {
     return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
   }
   
   if (!isAuthenticated) {
-    return <Navigate to="/login" replace />;
+    // Redirect to login and remember where they were trying to go
+    return <Navigate to="/login" state={{ from: location }} replace />;
   }
   
   return <>{children}</>;
